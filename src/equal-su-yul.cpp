@@ -15,6 +15,14 @@ int N;
 unsigned long long suyoul[100000];
 std::set<unsigned long long> diff;
 
+/* Recursive Standard C Function: Greatest Common Divisor */
+int
+gcdr ( int a, int b )
+{
+  if ( a==0 ) return b;
+  return gcdr ( b%a, a );
+}
+
 int suoul(int argc, char** argv) {
 	/* 아래 freopen 함수는 input.txt 를 read only 형식으로 연 후,
 	   앞으로 표준 입력(키보드) 대신 input.txt 파일로 부터 읽어오겠다는 의미의 코드입니다.
